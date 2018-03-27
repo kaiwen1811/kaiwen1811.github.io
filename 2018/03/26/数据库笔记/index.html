@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="数据库基本操作插入一条数据1INSERT INTO `taskRule` (`id`, `name`, `tili`, `createdAt`, `updatedAt`) VALUES (&apos;3&apos;, &apos;我是谁&apos;, &apos;2&apos;, CURRENT_TIMESTAMP, NULL);">
+<meta name="description" content="数据库基本操作插入一条数据1INSERT INTO `taskRule` (`id`, `name`, `tili`, `createdAt`, `updatedAt`) VALUES (&apos;3&apos;, &apos;我是谁&apos;, &apos;2&apos;, CURRENT_TIMESTAMP, NULL); 查询某个值，并返回不同的值1select distinct content, id from correct 查询task_r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客模版">
 <meta property="og:url" content="https://kaiwen1811.github.io/2018/03/26/数据库笔记/index.html">
 <meta property="og:site_name" content="朝young">
-<meta property="og:description" content="数据库基本操作插入一条数据1INSERT INTO `taskRule` (`id`, `name`, `tili`, `createdAt`, `updatedAt`) VALUES (&apos;3&apos;, &apos;我是谁&apos;, &apos;2&apos;, CURRENT_TIMESTAMP, NULL);">
+<meta property="og:description" content="数据库基本操作插入一条数据1INSERT INTO `taskRule` (`id`, `name`, `tili`, `createdAt`, `updatedAt`) VALUES (&apos;3&apos;, &apos;我是谁&apos;, &apos;2&apos;, CURRENT_TIMESTAMP, NULL); 查询某个值，并返回不同的值1select distinct content, id from correct 查询task_r">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-26T09:39:08.623Z">
+<meta property="og:updated_time" content="2018-03-27T02:05:57.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客模版">
-<meta name="twitter:description" content="数据库基本操作插入一条数据1INSERT INTO `taskRule` (`id`, `name`, `tili`, `createdAt`, `updatedAt`) VALUES (&apos;3&apos;, &apos;我是谁&apos;, &apos;2&apos;, CURRENT_TIMESTAMP, NULL);">
+<meta name="twitter:description" content="数据库基本操作插入一条数据1INSERT INTO `taskRule` (`id`, `name`, `tili`, `createdAt`, `updatedAt`) VALUES (&apos;3&apos;, &apos;我是谁&apos;, &apos;2&apos;, CURRENT_TIMESTAMP, NULL); 查询某个值，并返回不同的值1select distinct content, id from correct 查询task_r">
 
 
 
@@ -320,6 +320,11 @@
 
       
         <h2 id="数据库基本操作"><a href="#数据库基本操作" class="headerlink" title="数据库基本操作"></a>数据库基本操作</h2><h3 id="插入一条数据"><a href="#插入一条数据" class="headerlink" title="插入一条数据"></a>插入一条数据</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO `taskRule` (`id`, `name`, `tili`, `createdAt`, `updatedAt`) VALUES (<span class="string">'3'</span>, <span class="string">'我是谁'</span>, <span class="string">'2'</span>, CURRENT_TIMESTAMP, NULL);</span><br></pre></td></tr></table></figure>
+<h3 id="查询某个值，并返回不同的值"><a href="#查询某个值，并返回不同的值" class="headerlink" title="查询某个值，并返回不同的值"></a>查询某个值，并返回不同的值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct content, id from correct</span><br></pre></td></tr></table></figure>
+<h3 id="查询task-rule表里面createAt不为null的数据"><a href="#查询task-rule表里面createAt不为null的数据" class="headerlink" title="查询task_rule表里面createAt不为null的数据"></a>查询task_rule表里面createAt不为null的数据</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from task_rule <span class="built_in">where</span> createAt is not null</span><br></pre></td></tr></table></figure>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from task_rule order by id asc, tili desc</span><br><span class="line"><span class="comment">#asc代表升序，desc代表降序</span></span><br></pre></td></tr></table></figure>
+<h3 id="更新表里面的某一条数据"><a href="#更新表里面的某一条数据" class="headerlink" title="更新表里面的某一条数据"></a>更新表里面的某一条数据</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update task_rule <span class="built_in">set</span> name=<span class="string">"修改后的名字"</span> <span class="built_in">where</span> id = 1</span><br></pre></td></tr></table></figure>
+<h3 id="删除表里面的某一条记录"><a href="#删除表里面的某一条记录" class="headerlink" title="删除表里面的某一条记录"></a>删除表里面的某一条记录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update task_rule <span class="built_in">set</span> name=<span class="string">"修改后的名字"</span> <span class="built_in">where</span> id = 1</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -466,7 +471,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库基本操作"><span class="nav-number">1.</span> <span class="nav-text">数据库基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插入一条数据"><span class="nav-number">1.1.</span> <span class="nav-text">插入一条数据</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库基本操作"><span class="nav-number">1.</span> <span class="nav-text">数据库基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插入一条数据"><span class="nav-number">1.1.</span> <span class="nav-text">插入一条数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询某个值，并返回不同的值"><span class="nav-number">1.2.</span> <span class="nav-text">查询某个值，并返回不同的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询task-rule表里面createAt不为null的数据"><span class="nav-number">1.3.</span> <span class="nav-text">查询task_rule表里面createAt不为null的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">1.4.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新表里面的某一条数据"><span class="nav-number">1.5.</span> <span class="nav-text">更新表里面的某一条数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除表里面的某一条记录"><span class="nav-number">1.6.</span> <span class="nav-text">删除表里面的某一条记录</span></a></li></ol></li></ol></div>
             
 
           </div>
